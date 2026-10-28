@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Page, price } from "@/components/site";
 import { menu, restaurant as r } from "@/lib/restaurant";
-import biryani from "@/assets/biryani.jpg";
 import interior from "@/assets/interior.jpg";
-import pilau from "@/assets/pilau.jpg";
-import cassava from "@/assets/cassava.jpg";
+import pancakesImg from "@/assets/pancakes.jpg";
+import loadedFriesImg from "@/assets/loaded_fries.jpg";
+import burgerImg from "@/assets/burger.jpg";
+import cocktailsImg from "@/assets/cocktails.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,13 +87,13 @@ function Home() {
             <p className="mt-5 font-display text-xl">{price(pancakes.price)}</p>
           </div>
           <figure className="md:col-span-8">
-            <img src={cassava} alt={pancakes.name} loading="lazy" width={1600} height={1104} className="aspect-[4/3] w-full object-cover rounded-sm" />
+            <img src={pancakesImg} alt={pancakes.name} loading="lazy" width={1600} height={1104} className="aspect-[4/3] w-full object-cover rounded-sm" />
           </figure>
         </div>
 
         <div className="mt-24 grid gap-10 md:grid-cols-12 md:items-end">
           <figure className="md:col-span-5 md:col-start-2">
-            <img src={biryani} alt={loadedFries.name} loading="lazy" width={1200} height={1200} className="aspect-square w-full object-cover rounded-sm" />
+            <img src={loadedFriesImg} alt={loadedFries.name} loading="lazy" width={1200} height={1200} className="aspect-square w-full object-cover rounded-sm" />
           </figure>
           <div className="md:col-span-5 md:col-start-8">
             <p className="eyebrow text-clay">Nº 02 — Made for Sharing</p>
@@ -104,12 +105,12 @@ function Home() {
         </div>
       </section>
 
-      {/* Atmosphere: dark band with real guest quotes */}
+      {/* Atmosphere: dark band with real guest quotes & craft cocktails */}
       <section className="grain bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-7xl md:grid-cols-2">
-          <img src={interior} alt="CRAVE dining room and bar lounge" loading="lazy" width={1200} height={1504} className="h-full max-h-[900px] w-full object-cover" />
+          <img src={cocktailsImg} alt="CRAVE signature cocktail bar and lounge" loading="lazy" width={1200} height={1504} className="h-full max-h-[900px] w-full object-cover" />
           <div className="flex flex-col justify-center px-5 py-20 md:px-16">
-            <p className="eyebrow text-saffron">Guest Love</p>
+            <p className="eyebrow text-saffron">Guest Love &amp; Lounge</p>
             <blockquote className="mt-6 font-display text-2xl leading-snug md:text-3xl">
               “The Food, Ambiance and Service was top notch. Delvis was very friendly, calm and professional. We will definitely be back.”
             </blockquote>
@@ -130,7 +131,7 @@ function Home() {
       {/* Order & Delivery */}
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:grid-cols-12 md:px-10">
         <div className="md:col-span-7">
-          <img src={pilau} alt={burger.name} loading="lazy" width={1200} height={1200} className="aspect-[5/4] w-full object-cover rounded-sm" />
+          <img src={burgerImg} alt={burger.name} loading="lazy" width={1200} height={1200} className="aspect-[5/4] w-full object-cover rounded-sm" />
         </div>
         <div className="md:col-span-5">
           <p className="eyebrow text-clay">Direct &amp; Online Delivery</p>
